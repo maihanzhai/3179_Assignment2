@@ -1,0 +1,32 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 150,
+    "height": 150,
+    "title": "Literacy Level in 1950",
+    "data": {
+        "values": [
+            {
+                "category": "Literate World Population",
+                "value": 56
+            },
+            {
+                "category": "Illiterate World Population",
+                "value": 44
+            }
+        ]
+    },
+    "mark": {
+        "type": "arc",
+        "innerRadius": 50
+    },
+    "encoding": {
+        "theta": {
+            "field": "value",
+            "type": "quantitative"
+        },
+        "color": {
+            "field": "category",
+            "type": "nominal"
+        }
+    }
+}

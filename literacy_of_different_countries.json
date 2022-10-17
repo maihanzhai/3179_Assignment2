@@ -1,0 +1,158 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Literacy Rate in The World",
+    "width": 900,
+    "height": 500,
+    "projection": {
+        "type": "equalEarth",
+        "rotate": [
+            -150,
+            0,
+            0
+        ]
+    },
+    "data": {
+        "url": "https://raw.githubusercontent.com/maihanzhai/FIT3179_Homework9/main/ne_110m.json",
+        "format": {
+            "type": "topojson",
+            "feature": "ne_110m_admin_0_countries"
+        }
+    },
+    "params": [
+        {
+            "name": "Continent_selection",
+            "bind": {
+                "input": "select",
+                "options": [
+                    null,
+                    "Australia",
+                    "Canada",
+                    "China",
+                    "France",
+                    "Germany",
+                    "Ireland"
+                ],
+                "labels": [
+                    "Show All",
+                    "Australia",
+                    "Canada",
+                    "China",
+                    "France",
+                    "Germany",
+                    "Ireland"
+                ],
+                "name": "Selection: "
+            }
+        },
+        {
+            "name": "Rate_Above",
+            "value": 0,
+            "bind": {
+                "input": "range",
+                "min": 0,
+                "max": 100,
+                "step": 0.1,
+                "name": "Literacy rate: "
+            }
+        }
+    ],
+    "layer": [
+        {
+            "data": {
+                "url": "https://raw.githubusercontent.com/yvesypher/S2-2022-FIT3179/main/Data_visualisation_2/js/ne_110m_oceans.topojson",
+                "format": {
+                    "type": "topojson",
+                    "feature": "oceans"
+                }
+            },
+            "mark": {
+                "type": "geoshape",
+                "fill": "#ADD8E6"
+            }
+        },
+        {
+            "data": {
+                "url": "https://raw.githubusercontent.com/maihanzhai/FIT3179_Homework9/main/ne_110m_graticules_30.json",
+                "format": {
+                    "type": "topojson",
+                    "feature": "ne_110m_graticules_30"
+                }
+            },
+            "mark": {
+                "type": "geoshape",
+                "fill": null,
+                "stroke": "gainsboro"
+            }
+        },
+        {
+            "transform": [
+                {
+                    "lookup": "properties.NAME",
+                    "from": {
+                        "data": {
+                            "url": "https://raw.githubusercontent.com/maihanzhai/3179_Assignment2/main/literacy-rate-by-country%20new.csv"
+                        },
+                        "key": "CountryName",
+                        "fields": [
+                            "LiteracyRate",
+                            "Year"
+                        ]
+                    }
+                }
+            ],
+            "mark": {
+                "type": "geoshape"
+            },
+            "encoding": {
+                "color": {
+                    "field": "LiteracyRate",
+                    "type": "quantitative",
+                    "title": "Literacy Rate",
+                    "scale": {
+                        "type": "threshold",
+                        "domain": [
+                            20,
+                            30,
+                            40,
+                            50,
+                            60,
+                            70,
+                            80,
+                            90,
+                            100
+                        ],
+                        "range": [
+                            "#feeee2",
+                            "#fecba7",
+                            "#feaa6f",
+                            "#fd9c56",
+                            "#fd8d3c",
+                            "#fd7e23",
+                            "#fd6f0a",
+                            "#eb6302",
+                            "#974b15",
+                            "#321907"
+                        ]
+                    }
+                },
+                "tooltip": [
+                    {
+                        "field": "properties.NAME",
+                        "type": "nominal",
+                        "title": "Country"
+                    },
+                    {
+                        "field": "LiteracyRate",
+                        "type": "quantitative",
+                        "title": "Literacy Rate"
+                    },
+                    {
+                        "field": "Year",
+                        "type": "quantitative",
+                        "title": "Year"
+                    }
+                ]
+            }
+        }
+    ]
+}

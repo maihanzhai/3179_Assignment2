@@ -1,0 +1,35 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/maihanzhai/3179_Assignment2/main/literate-and-illiterate-world-population.csv"
+  },
+  "repeat": {
+    "layer": [
+      "Literate world population (OWID based on OECD & UNESCO (2019))",
+      "Illiterate world population (OWID based on OECD & UNESCO (2019))"
+    ]
+  },
+  "spec": {
+    "mark": "line",
+    "encoding": {
+      "x": {
+        "field": "Year",
+        "type": "ordinal"
+      },
+      "y": {
+        "aggregate": "sum",
+        "field": {
+          "repeat": "layer"
+        },
+        "title": "Literate world population",
+        "type": "quantitative"
+      },
+      "color": {
+        "datum": {
+          "repeat": "layer"
+        },
+        "type": "nominal"
+      }
+    }
+  }
+}
