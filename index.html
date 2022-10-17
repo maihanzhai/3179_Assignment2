@@ -9,141 +9,164 @@
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
     <title>FIT3179 Assignment 2</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
+        integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link rel="stylesheet" type="text/css" href="styles.css" media="all">
 </head>
 
 <body>
-    <h1 align="center" , style="font-family:sans-serif">Education in The World</h1>
 
-    <p style="font-family:sans-serif">
-        <strong style="font-size:25px">E</strong>ducation is a purposeful activity. It can spread knowledge or develop
-        skills. At the same time, we can shape a better society through education to understand and respect rights, laws
-        and regulations. In short, for every country, education is a top priority. Every country and the United Nations
-        are working together to improve the quality and efficiency of education.
-    </p>
+    <div class="page">
 
-    <hr noshade="">
+        <h1 align="center" , style="font-family:sans-serif">Education in The World</h1>
 
-    <h2 align="center" , style="font-family:sans-serif">Literacy Rates in Different Countries</h2>
+        <p style="font-family:sans-serif">
+            <strong style="font-size:25px">E</strong>ducation is a purposeful activity. It can spread knowledge or
+            develop skills. At the same time, we can shape a better society through education to understand and respect
+            rights, laws and regulations. In short, for every country, education is a top priority. Every country and
+            the United Nations are working together to improve the quality and efficiency of education.
+        </p>
 
-    <p style="font-family:sans-serif">
-        This map shows the literacy rate of each country at different times.
-    </p>
-
-    <p style="font-family:sans-serif">
-        Among these countries, we can find that the majority of the world's countries have literacy rates above 50%.
-        According to the map, there are still some countries in the <font color="red"><b>African</b></font> region where
-        the literacy rate is around 30%.
-    </p>
-
-    <p style="font-family:sans-serif">
-        Of these countries, in the <b>2000</b>, <b>Finland's</b> national literacy rate reached 100%. <b>Greenland</b>
-        had a 100% literacy rate in <b>2001</b>. <b>Norway</b>, on the other hand, had a 100% literacy rate by
-        <b>2011</b>.
-    </p>
-
-    <div id="literacy_of_different_countries"></div>
-    <script>
-        var data = "literacy_of_different_countries.json";
-        vegaEmbed("#literacy_of_different_countries", data).then(function (result) { }).catch(console.error);
-    </script>
-    <hr>
+        <hr noshade="">
 
 
-    <h2 align="center" , style="font-family:sans-serif">Literacy and Illiteracy Rates in The World in Different Years
-    </h2>
 
-    <p style="font-family:sans-serif">
-        According to my search on the Internet, the earliest literacy in the form of books appeared around <font
-            color="red"><b>3,500-3,000
-                BC</b></font>. But literacy was still limited by many things. It was not until the Middle Ages that
-        people gradually had the opportunity to become literate because of the mass production of books.
-    </p>
+        <div class="description description-right">
+            <h2 align="center" , style="font-family:sans-serif">Literacy Rates in Different Countries</h2>
 
-    <p style="font-family:sans-serif">
-        This line graph shows the change in the world's illiteracy and literacy rates between 1800 and 2016.
-    </p>
+            <p style="font-family:sans-serif">
+                This map shows the literacy rate of each country at different times.
+            </p>
 
-    <p style="font-family:sans-serif">
-        According to the change of the line cahrt, we can see that the literacy rate has been <b>increasing</b>.
-        However, the growth was relatively slow until 1930. It grew very quickly around 1930 because at that time,
-        education was highly regarded by people.
-    </p>
+            <p style="font-family:sans-serif">
+                Among these countries, we can find that the majority of the world's countries have literacy rates above
+                50%. According to the map, there are still some countries in the <font color="red"><b>African</b></font>
+                region where the literacy rate is around 30%.
+            </p>
 
-    <div id="line_chart"></div>
-    <script>
-        var data6 = "line_chart.json";
-        vegaEmbed("#line_chart", data6).then(function (result) { }).catch(console.error);
-    </script>
+            <p style="font-family:sans-serif">
+                Of these countries, in the <b>2000</b>, <b>Finland's</b> national literacy rate reached 100%.
+                <b>Greenland</b> had a 100% literacy rate in <b>2001</b>. <b>Norway</b>, on the other hand, had a 100%
+                literacy rate by <b>2011</b>.
+            </p>
+        </div>
 
 
-    <hr>
+        <div id="literacy_of_different_countries"></div>
+        <script>
+            var data = "literacy_of_different_countries.json";
+            vegaEmbed("#literacy_of_different_countries", data).then(function (result) { }).catch(console.error);
+        </script>
+        <hr>
 
 
-    <div id="donut_chart1"></div>
-    <script>
-        var data2 = "donut_chart1.json";
-        vegaEmbed("#donut_chart1", data2).then(function (result) { }).catch(console.error);
-    </script>
+        <div class="pure-u-1-3">
+        <div class="description description-right">
+        <h2 align="center" , style="font-family:sans-serif">Literacy and Illiteracy Rates in The World in Different
+            Years
+        </h2>
+
+        <p style="font-family:sans-serif">
+            According to my search on the Internet, the earliest literacy in the form of books appeared around <font
+                color="red"><b>3,500-3,000
+                    BC</b></font>. But literacy was still limited by many things. It was not until the Middle Ages that
+            people gradually had the opportunity to become literate because of the mass production of books.
+        </p>
+
+        <p style="font-family:sans-serif">
+            This line graph shows the change in the world's illiteracy and literacy rates between 1800 and 2016.
+        </p>
+
+        <p style="font-family:sans-serif">
+            According to the change of the line cahrt, we can see that the literacy rate has been <b>increasing</b>.
+            However, the growth was relatively slow until 1930. It grew very quickly around 1930 because at that time,
+            education was highly regarded by people.
+        </p>
+        </div>
+        </div>
+
+        <div id="line_chart" ></div>
+        <script>
+            var data6 = "line_chart.json";
+            vegaEmbed("#line_chart", data6).then(function (result) { }).catch(console.error);
+        </script>
 
 
-    <div id="donut_chart2"></div>
-    <script>
-        var data3 = "donut_chart2.json";
-        vegaEmbed("#donut_chart2", data3).then(function (result) { }).catch(console.error);
-    </script>
+        <hr>
 
 
-    <div id="donut_chart3"></div>
-    <script>
-        var data4 = "donut_chart3.json";
-        vegaEmbed("#donut_chart3", data4).then(function (result) { }).catch(console.error);
-    </script>
+        <div id="donut_chart1"></div>
+        <script>
+            var data2 = "donut_chart1.json";
+            vegaEmbed("#donut_chart1", data2).then(function (result) { }).catch(console.error);
+        </script>
 
 
-    <div id="donut_chart4"></div>
-    <script>
-        var data5 = "donut_chart4.json";
-        vegaEmbed("#donut_chart4", data5).then(function (result) { }).catch(console.error);
-    </script>
-
-    <h2 align="center" , style="font-family:sans-serif">Literacy and Illiteracy Rates in The World</h2>
-
-    <p style="font-family:sans-serif">
-        The four donut charts are created from the above line chart. They show the percentage of literacy and illiteracy
-        rates in the world for four different periods: <b>1820</b>, <b>1900</b>, <b>1950</b>, and <b>2000</b>.
-    </p>
-
-    <p style="font-family:sans-serif">The orange part inside the donut chart represents the world literacy population.
-        Comparing these four donut charts, we can clearly see that the <b>
-            <font color=orange>orange</font>
-        </b> part has become more and more weighted as time goes on. This means that more and more people in the world
-        are becoming literate.
-    </p>
+        <div id="donut_chart2"></div>
+        <script>
+            var data3 = "donut_chart2.json";
+            vegaEmbed("#donut_chart2", data3).then(function (result) { }).catch(console.error);
+        </script>
 
 
-    <hr>
+        <div id="donut_chart3"></div>
+        <script>
+            var data4 = "donut_chart3.json";
+            vegaEmbed("#donut_chart3", data4).then(function (result) { }).catch(console.error);
+        </script>
 
-    <h2 align="center" , style="font-family:sans-serif">The Percentage of Repeaters in Primary Education in Each Country
-    </h2>
 
-    <div id="bar_chart"></div>
-    <script>
-        var data1 = "bar_chart.json";
-        vegaEmbed("#bar_chart", data1).then(function (result) { }).catch(console.error);
-    </script>
+        <div id="donut_chart4"></div>
+        <script>
+            var data5 = "donut_chart4.json";
+            vegaEmbed("#donut_chart4", data5).then(function (result) { }).catch(console.error);
+        </script>
 
-    <p style="font-family:sans-serif">
-        This bar chart represents the percentage of elementary school repeaters in different countries. The country of
-        <b>Burundi</b> has the highest elementary school repetition rate of all the study subjects, with 24.25%. Which
-        means that this country's education level is relatively backward.
-    </p>
+        <h2 align="center" , style="font-family:sans-serif">Literacy and Illiteracy Rates in The World</h2>
 
-    <hr noshade="">
+        <p style="font-family:sans-serif">
+            The four donut charts are created from the above line chart. They show the percentage of literacy and
+            illiteracy rates in the world for four different periods: <b>1820</b>, <b>1900</b>, <b>1950</b>, and
+            <b>2000</b>.
+        </p>
 
-    <p style="font-family:sans-serif" , align="right">
-        The visualization was created by Maihan Zhai.
-    </p>
+        <p style="font-family:sans-serif">The orange part inside the donut chart represents the world literacy
+            population. Comparing these four donut charts, we can clearly see that the <b>
+                <font color=orange>orange</font>
+            </b> part has become more and more weighted as time goes on. This means that more and more people in the
+            world are becoming literate.
+        </p>
 
+
+        <hr>
+
+        <h2 align="center" , style="font-family:sans-serif">The Percentage of Repeaters in Primary Education in Each
+            Country
+        </h2>
+
+        <div id="bar_chart"></div>
+        <script>
+            var data1 = "bar_chart.json";
+            vegaEmbed("#bar_chart", data1).then(function (result) { }).catch(console.error);
+        </script>
+
+        <p style="font-family:sans-serif">
+            This bar chart represents the percentage of elementary school repeaters in different countries. The country
+            of<b>Burundi</b> has the highest elementary school repetition rate of all the study subjects, with 24.25%.
+            Which means that this country's education level is relatively backward.
+        </p>
+
+        <hr noshade="">
+
+        <p style="font-family:sans-serif" , align="right">
+            The visualization was created by Maihan Zhai.
+        </p>
+
+    </div>
 
 </body>
 
