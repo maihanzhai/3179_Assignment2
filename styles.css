@@ -3,9 +3,21 @@ body {
 }
 
 .page {
-    width: 850px;
+    width: 1450px;
     background-color: white;
     margin: auto;
     padding: 50px;
     padding-top: 35px;
+}
+
+.description-right {
+    padding-left: 50px;
+}
+
+.pure-g {
+    margin-bottom: 40px;
+}
+
+.vis-container {
+    width: 100%;
 }
